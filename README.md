@@ -92,6 +92,7 @@ Then open `http://localhost:8080` in your browser.
 Place the project inside your Apache document root and ensure `mod_php` and `mod_curl` are enabled, then visit your local URL (such as `http://localhost/Yong_ai-voice-summarizer`).
 
 ## Usage Workflow
+<img width="1915" height="992" alt="image" src="https://github.com/user-attachments/assets/05d64243-fc13-4d1f-86a8-7c0a423e56ac" />
 
 1. Click **Settings** in the top navigation bar to configure or update your Gemini / Agnes AI endpoint, model, and API key.
 2. Click **Test Gemini Connection** (or **Test Agnes AI Connection**) to verify connectivity, then click **Save Settings to Server (.env)**.
