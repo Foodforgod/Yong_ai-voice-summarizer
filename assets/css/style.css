@@ -1,0 +1,265 @@
+:root {
+    --bg-gradient-1: #eef4ff;
+    --bg-gradient-2: #f5efff;
+    --bg-gradient-3: #e8f3ff;
+    --nav-bg: rgba(15, 23, 42, 0.92);
+    --card-bg: rgba(255, 255, 255, 0.78);
+    --card-border: rgba(255, 255, 255, 0.85);
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --accent-blue: #2563eb;
+    --accent-purple: #7c3aed;
+    --heading-blue: #1d4ed8;
+    --shadow-soft: 0 18px 45px -15px rgba(37, 99, 235, 0.14), 0 4px 16px -4px rgba(15, 23, 42, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-main);
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 12% 10%, var(--bg-gradient-1) 0%, transparent 48%),
+        radial-gradient(circle at 88% 15%, var(--bg-gradient-2) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, var(--bg-gradient-3) 0%, transparent 55%),
+        linear-gradient(160deg, #f8faff 0%, #f3f0ff 55%, #eef6ff 100%);
+}
+
+.app-container {
+    max-width: 1040px;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.fw-extrabold {
+    font-weight: 800;
+}
+
+.text-indigo {
+    color: var(--accent-purple);
+}
+
+/* Navbar */
+.top-navbar {
+    background: var(--nav-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18);
+}
+
+.brand-icon-wrap {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.brand-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+}
+
+.engine-ready {
+    background: rgba(16, 185, 129, 0.15);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #34d399;
+    margin-right: 0.4rem;
+}
+
+.stateless-badge {
+    background: rgba(139, 92, 246, 0.18);
+    color: #ddd6fe;
+    border: 1px solid rgba(167, 139, 250, 0.32);
+}
+
+.settings-btn {
+    border-radius: 10px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.settings-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Hero */
+.hero-title {
+    font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+    letter-spacing: -0.025em;
+    background: linear-gradient(135deg, #0f172a 10%, #1d4ed8 60%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    max-width: 720px;
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    line-height: 1.65;
+}
+
+/* Glass Cards */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.provider-box {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+/* Upload Drop Zone */
+.drop-zone {
+    border: 2px dashed rgba(37, 99, 235, 0.35);
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.22s ease;
+}
+
+.drop-zone:hover,
+.drop-zone.drag-over {
+    border-color: var(--accent-blue);
+    background: rgba(239, 246, 255, 0.9);
+    transform: translateY(-1px);
+}
+
+.upload-icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
+}
+
+/* File Preview */
+.file-preview-card {
+    background: rgba(248, 250, 252, 0.92);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.file-badge-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(37, 99, 235, 0.12);
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Processing Stepper */
+.processing-panel {
+    background: rgba(248, 250, 252, 0.9);
+    border: 1px solid rgba(37, 99, 235, 0.18);
+}
+
+.step-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.step-item.active .step-box {
+    border-color: var(--accent-blue);
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--accent-blue);
+    font-weight: 700;
+}
+
+.step-item.completed .step-box {
+    border-color: rgba(16, 185, 129, 0.45);
+    background: rgba(16, 185, 129, 0.08);
+    color: #047857;
+}
+
+/* Result Sections */
+.section-heading {
+    color: var(--heading-blue);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(29, 78, 216, 0.16);
+    margin-bottom: 0.75rem;
+}
+
+.result-list {
+    padding-left: 1.25rem;
+}
+
+.result-list li {
+    margin-bottom: 0.45rem;
+    line-height: 1.6;
+}
+
+.empty-state-note {
+    font-style: italic;
+    color: var(--text-muted);
+    background: rgba(241, 245, 249, 0.8);
+    padding: 0.65rem 0.9rem;
+    border-radius: 10px;
+    border-left: 3px solid #94a3b8;
+}
+
+.transcript-box {
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    max-height: 420px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+@media (max-width: 576px) {
+    .glass-card {
+        border-radius: 16px;
+    }
+    .status-pill {
+        font-size: 0.7rem;
+    }
+}
